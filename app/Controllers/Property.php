@@ -98,12 +98,7 @@ class Property extends BaseController
 
 		$builder->select();
 		$builder->where('id_user', $idUser);
-
-		if (is_int($idProperty)) {
-			$builder->where('id_property', $idProperty);
-		} else {
-			$builder->whereIn('id_property', $idProperty);
-		}
+		$builder->where('id_property', $idProperty);
 
 		$data = $builder->get();
 		$builder->resetQuery();

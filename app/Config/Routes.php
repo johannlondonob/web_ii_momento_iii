@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->group('user', function ($routes) {
 	$routes->get('/', 'User::index');
-	$routes->get('/sign-in', 'User::signin');
+	$routes->post('/sign-in', 'User::signin');
 	$routes->post('/sign-up', 'User::signup');
 });
 
